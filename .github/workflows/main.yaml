@@ -15,15 +15,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
-      - name: Instalar dependências
-        run: npm install
-
-      - name: Rodar testes
-        run: npm test
-
-      - name: Run build (optional)
-        run: npm run build --if-present
+          
+      - name: Usar Composite Action
+        uses: arcorreiaa/workshop-devops3@v1
 
       - name: Archive production package
         run: zip -r release.zip .
